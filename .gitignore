@@ -15,6 +15,8 @@
 #Source files:
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
 !*.vhd
+!*.png
+!*.md
 !*.v
 !*.bd
 !*.edif
