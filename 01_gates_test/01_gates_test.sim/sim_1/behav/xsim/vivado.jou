@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Feb 10 15:04:19 2026
+# Process ID: 11236
+# Current directory: D:/project/FPGA/aI1/01_gates_test/01_gates_test.sim/sim_1/behav/xsim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7780 D:\project\FPGA\aI1\01_gates_test\01_gates_test.sim\sim_1\behav\xsim\tb_gatetest_behav.wdb
+# Log file: D:/project/FPGA/aI1/01_gates_test/01_gates_test.sim/sim_1/behav/xsim/vivado.log
+# Journal file: D:/project/FPGA/aI1/01_gates_test/01_gates_test.sim/sim_1/behav/xsim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {D:\project\FPGA\aI1\01_gates_test\01_gates_test.sim\sim_1\behav\xsim\tb_gatetest_behav.wdb}
+close_sim
+close_project

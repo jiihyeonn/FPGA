@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Feb 11 17:48:37 2026
+# Process ID: 8484
+# Current directory: D:/project/FPGA/aI1/03.add4_sub4/03.add4_sub4.runs/synth_1
+# Command line: vivado.exe -log add6_sub6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source add6_sub6.tcl
+# Log file: D:/project/FPGA/aI1/03.add4_sub4/03.add4_sub4.runs/synth_1/add6_sub6.vds
+# Journal file: D:/project/FPGA/aI1/03.add4_sub4/03.add4_sub4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source add6_sub6.tcl -notrace

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../07.min_sec_stopwatch.srcs/sources_1/new/btn_debounce.v" \
+"../../../../07.min_sec_stopwatch.srcs/sources_1/new/control_tower.v" \
+"../../../../07.min_sec_stopwatch.srcs/sources_1/new/fnd_controller.v" \
+"../../../../07.min_sec_stopwatch.srcs/sources_1/new/tick_generator.v" \
+"../../../../07.min_sec_stopwatch.srcs/sources_1/new/top.v" \
+"../../../../07.min_sec_stopwatch.srcs/sim_1/new/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

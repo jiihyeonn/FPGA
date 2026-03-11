@@ -1,0 +1,1585 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Fri Feb 27 16:23:51 2026
+| Host         : DESKTOP-PQ1PAHT running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file top_buzzer_timing_summary_routed.rpt -pb top_buzzer_timing_summary_routed.pb -rpx top_buzzer_timing_summary_routed.rpx -warn_on_violation
+| Design       : top_buzzer
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  4           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (3)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.381        0.000                      0                  230        0.214        0.000                      0                  230        4.500        0.000                       0                   141  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         2.381        0.000                      0                  230        0.214        0.000                      0                  230        4.500        0.000                       0                   141  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.381ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.214ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.381ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.574ns  (logic 3.884ns (51.278%)  route 3.690ns (48.722%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.038ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.780ns = ( 14.780 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          1.011    12.526    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X49Y60         LUT6 (Prop_lut6_I5_O)        0.124    12.650 r  u_play_melody/clk_cnt[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.650    u_play_melody/clk_cnt[0]_i_1_n_0
+    SLICE_X49Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.439    14.780    u_play_melody/CLK
+    SLICE_X49Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[0]/C
+                         clock pessimism              0.258    15.038    
+                         clock uncertainty           -0.035    15.003    
+    SLICE_X49Y60         FDCE (Setup_fdce_C_D)        0.029    15.032    u_play_melody/clk_cnt_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -12.650    
+  -------------------------------------------------------------------
+                         slack                                  2.381    
+
+Slack (MET) :             2.421ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.549ns  (logic 3.884ns (51.449%)  route 3.665ns (48.551%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.986    12.501    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X51Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.625 r  u_play_melody/clk_cnt[1]_i_1/O
+                         net (fo=1, routed)           0.000    12.625    u_play_melody/clk_cnt[1]_i_1_n_0
+    SLICE_X51Y59         FDCE                                         r  u_play_melody/clk_cnt_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X51Y59         FDCE                                         r  u_play_melody/clk_cnt_reg[1]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X51Y59         FDCE (Setup_fdce_C_D)        0.029    15.047    u_play_melody/clk_cnt_reg[1]
+  -------------------------------------------------------------------
+                         required time                         15.047    
+                         arrival time                         -12.625    
+  -------------------------------------------------------------------
+                         slack                                  2.421    
+
+Slack (MET) :             2.426ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.546ns  (logic 3.884ns (51.470%)  route 3.662ns (48.530%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.983    12.498    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X51Y59         LUT6 (Prop_lut6_I5_O)        0.124    12.622 r  u_play_melody/clk_cnt[2]_i_1/O
+                         net (fo=1, routed)           0.000    12.622    u_play_melody/clk_cnt[2]_i_1_n_0
+    SLICE_X51Y59         FDCE                                         r  u_play_melody/clk_cnt_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X51Y59         FDCE                                         r  u_play_melody/clk_cnt_reg[2]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X51Y59         FDCE (Setup_fdce_C_D)        0.031    15.049    u_play_melody/clk_cnt_reg[2]
+  -------------------------------------------------------------------
+                         required time                         15.049    
+                         arrival time                         -12.622    
+  -------------------------------------------------------------------
+                         slack                                  2.426    
+
+Slack (MET) :             2.429ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/MY_buzzer_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.589ns  (logic 3.884ns (51.178%)  route 3.705ns (48.822%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 r  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          1.026    12.541    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y59         LUT6 (Prop_lut6_I4_O)        0.124    12.665 r  u_play_melody/MY_buzzer_i_1/O
+                         net (fo=1, routed)           0.000    12.665    u_play_melody/MY_buzzer_i_1_n_0
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/MY_buzzer_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/MY_buzzer_reg/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X52Y59         FDCE (Setup_fdce_C_D)        0.077    15.095    u_play_melody/MY_buzzer_reg
+  -------------------------------------------------------------------
+                         required time                         15.095    
+                         arrival time                         -12.665    
+  -------------------------------------------------------------------
+                         slack                                  2.429    
+
+Slack (MET) :             2.520ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.434ns  (logic 3.884ns (52.244%)  route 3.550ns (47.756%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.039ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.871    12.386    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X49Y61         LUT6 (Prop_lut6_I5_O)        0.124    12.510 r  u_play_melody/clk_cnt[9]_i_1/O
+                         net (fo=1, routed)           0.000    12.510    u_play_melody/clk_cnt[9]_i_1_n_0
+    SLICE_X49Y61         FDCE                                         r  u_play_melody/clk_cnt_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.438    14.779    u_play_melody/CLK
+    SLICE_X49Y61         FDCE                                         r  u_play_melody/clk_cnt_reg[9]/C
+                         clock pessimism              0.258    15.037    
+                         clock uncertainty           -0.035    15.002    
+    SLICE_X49Y61         FDCE (Setup_fdce_C_D)        0.029    15.031    u_play_melody/clk_cnt_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.031    
+                         arrival time                         -12.510    
+  -------------------------------------------------------------------
+                         slack                                  2.520    
+
+Slack (MET) :             2.557ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.464ns  (logic 3.884ns (52.038%)  route 3.580ns (47.962%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.900    12.416    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y60         LUT6 (Prop_lut6_I5_O)        0.124    12.540 r  u_play_melody/clk_cnt[8]_i_1/O
+                         net (fo=1, routed)           0.000    12.540    u_play_melody/clk_cnt[8]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[8]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X52Y60         FDCE (Setup_fdce_C_D)        0.079    15.097    u_play_melody/clk_cnt_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.097    
+                         arrival time                         -12.540    
+  -------------------------------------------------------------------
+                         slack                                  2.557    
+
+Slack (MET) :             2.561ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.458ns  (logic 3.884ns (52.080%)  route 3.574ns (47.920%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.894    12.410    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y60         LUT6 (Prop_lut6_I5_O)        0.124    12.534 r  u_play_melody/clk_cnt[5]_i_1/O
+                         net (fo=1, routed)           0.000    12.534    u_play_melody/clk_cnt[5]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[5]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X52Y60         FDCE (Setup_fdce_C_D)        0.077    15.095    u_play_melody/clk_cnt_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.095    
+                         arrival time                         -12.534    
+  -------------------------------------------------------------------
+                         slack                                  2.561    
+
+Slack (MET) :             2.567ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.454ns  (logic 3.884ns (52.108%)  route 3.570ns (47.892%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.890    12.406    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y60         LUT6 (Prop_lut6_I5_O)        0.124    12.530 r  u_play_melody/clk_cnt[7]_i_1/O
+                         net (fo=1, routed)           0.000    12.530    u_play_melody/clk_cnt[7]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[7]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X52Y60         FDCE (Setup_fdce_C_D)        0.079    15.097    u_play_melody/clk_cnt_reg[7]
+  -------------------------------------------------------------------
+                         required time                         15.097    
+                         arrival time                         -12.530    
+  -------------------------------------------------------------------
+                         slack                                  2.567    
+
+Slack (MET) :             2.568ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.452ns  (logic 3.884ns (52.121%)  route 3.568ns (47.879%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.780ns = ( 14.780 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.888    12.404    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y61         LUT6 (Prop_lut6_I5_O)        0.124    12.528 r  u_play_melody/clk_cnt[14]_i_1/O
+                         net (fo=1, routed)           0.000    12.528    u_play_melody/clk_cnt[14]_i_1_n_0
+    SLICE_X52Y61         FDCE                                         r  u_play_melody/clk_cnt_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.439    14.780    u_play_melody/CLK
+    SLICE_X52Y61         FDCE                                         r  u_play_melody/clk_cnt_reg[14]/C
+                         clock pessimism              0.272    15.052    
+                         clock uncertainty           -0.035    15.017    
+    SLICE_X52Y61         FDCE (Setup_fdce_C_D)        0.079    15.096    u_play_melody/clk_cnt_reg[14]
+  -------------------------------------------------------------------
+                         required time                         15.096    
+                         arrival time                         -12.528    
+  -------------------------------------------------------------------
+                         slack                                  2.568    
+
+Slack (MET) :             2.568ns  (required time - arrival time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        7.455ns  (logic 3.884ns (52.101%)  route 3.571ns (47.899%))
+  Logic Levels:           10  (CARRY4=7 LUT3=2 LUT6=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.076ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.555     5.076    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.456     5.532 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          1.030     6.562    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X49Y60         LUT3 (Prop_lut3_I2_O)        0.152     6.714 r  u_play_melody/clk_cnt2_carry_i_1/O
+                         net (fo=1, routed)           0.342     7.056    u_play_melody/clk_cnt2_carry_i_1_n_0
+    SLICE_X48Y60         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.788     7.844 r  u_play_melody/clk_cnt2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.844    u_play_melody/clk_cnt2_carry_n_0
+    SLICE_X48Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.958 r  u_play_melody/clk_cnt2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.958    u_play_melody/clk_cnt2_carry__0_n_0
+    SLICE_X48Y62         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     8.229 r  u_play_melody/clk_cnt1_carry__0_i_10/CO[0]
+                         net (fo=3, routed)           0.539     8.767    u_play_melody/clk_cnt1_carry__0_i_10_n_3
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.829     9.596 r  u_play_melody/clk_cnt1_carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     9.596    u_play_melody/clk_cnt1_carry__0_i_9_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.753 r  u_play_melody/clk_cnt1_carry__1_i_4/CO[1]
+                         net (fo=11, routed)          0.769    10.522    u_play_melody/clk_cnt1_carry__1_i_4_n_2
+    SLICE_X51Y62         LUT3 (Prop_lut3_I0_O)        0.329    10.851 r  u_play_melody/clk_cnt1_carry__1_i_6/O
+                         net (fo=1, routed)           0.000    10.851    u_play_melody/clk_cnt1_carry__1_i_6_n_0
+    SLICE_X51Y62         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.401 r  u_play_melody/clk_cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000    11.401    u_play_melody/clk_cnt1_carry__1_n_0
+    SLICE_X51Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.515 f  u_play_melody/clk_cnt1_carry__2/CO[3]
+                         net (fo=23, routed)          0.891    12.407    u_play_melody/clk_cnt1_carry__2_n_0
+    SLICE_X52Y60         LUT6 (Prop_lut6_I5_O)        0.124    12.531 r  u_play_melody/clk_cnt[6]_i_1/O
+                         net (fo=1, routed)           0.000    12.531    u_play_melody/clk_cnt[6]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         1.440    14.781    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[6]/C
+                         clock pessimism              0.272    15.053    
+                         clock uncertainty           -0.035    15.018    
+    SLICE_X52Y60         FDCE (Setup_fdce_C_D)        0.081    15.099    u_play_melody/clk_cnt_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.099    
+                         arrival time                         -12.531    
+  -------------------------------------------------------------------
+                         slack                                  2.568    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.214ns  (arrival time - required time)
+  Source:                 u_play_melody/R_buzzer_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/R_buzzer_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.335ns  (logic 0.209ns (62.414%)  route 0.126ns (37.586%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.563     1.446    u_play_melody/CLK
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/R_buzzer_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y59         FDCE (Prop_fdce_C_Q)         0.164     1.610 r  u_play_melody/R_buzzer_reg/Q
+                         net (fo=2, routed)           0.126     1.736    u_play_melody/R_buzzer_reg_n_0
+    SLICE_X52Y59         LUT6 (Prop_lut6_I5_O)        0.045     1.781 r  u_play_melody/R_buzzer_i_1/O
+                         net (fo=1, routed)           0.000     1.781    u_play_melody/R_buzzer_i_1_n_0
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/R_buzzer_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.833     1.961    u_play_melody/CLK
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/R_buzzer_reg/C
+                         clock pessimism             -0.515     1.446    
+    SLICE_X52Y59         FDCE (Hold_fdce_C_D)         0.121     1.567    u_play_melody/R_buzzer_reg
+  -------------------------------------------------------------------
+                         required time                         -1.567    
+                         arrival time                           1.781    
+  -------------------------------------------------------------------
+                         slack                                  0.214    
+
+Slack (MET) :             0.233ns  (arrival time - required time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.366ns  (logic 0.186ns (50.803%)  route 0.180ns (49.197%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.444ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.561     1.444    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          0.180     1.765    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X52Y62         LUT6 (Prop_lut6_I2_O)        0.045     1.810 r  u_play_melody/clk_cnt[13]_i_1/O
+                         net (fo=1, routed)           0.000     1.810    u_play_melody/clk_cnt[13]_i_1_n_0
+    SLICE_X52Y62         FDCE                                         r  u_play_melody/clk_cnt_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.830     1.958    u_play_melody/CLK
+    SLICE_X52Y62         FDCE                                         r  u_play_melody/clk_cnt_reg[13]/C
+                         clock pessimism             -0.501     1.457    
+    SLICE_X52Y62         FDCE (Hold_fdce_C_D)         0.120     1.577    u_play_melody/clk_cnt_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.577    
+                         arrival time                           1.810    
+  -------------------------------------------------------------------
+                         slack                                  0.233    
+
+Slack (MET) :             0.236ns  (arrival time - required time)
+  Source:                 u_play_melody/btnMY_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.370ns  (logic 0.186ns (50.254%)  route 0.184ns (49.746%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.444ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.561     1.444    u_play_melody/CLK
+    SLICE_X53Y62         FDCE                                         r  u_play_melody/btnMY_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y62         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  u_play_melody/btnMY_step_reg[0]/Q
+                         net (fo=51, routed)          0.184     1.769    u_play_melody/btnMY_step_reg_n_0_[0]
+    SLICE_X52Y62         LUT6 (Prop_lut6_I2_O)        0.045     1.814 r  u_play_melody/clk_cnt[15]_i_1/O
+                         net (fo=1, routed)           0.000     1.814    u_play_melody/clk_cnt[15]_i_1_n_0
+    SLICE_X52Y62         FDCE                                         r  u_play_melody/clk_cnt_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.830     1.958    u_play_melody/CLK
+    SLICE_X52Y62         FDCE                                         r  u_play_melody/clk_cnt_reg[15]/C
+                         clock pessimism             -0.501     1.457    
+    SLICE_X52Y62         FDCE (Hold_fdce_C_D)         0.121     1.578    u_play_melody/clk_cnt_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.578    
+                         arrival time                           1.814    
+  -------------------------------------------------------------------
+                         slack                                  0.236    
+
+Slack (MET) :             0.237ns  (arrival time - required time)
+  Source:                 u_play_melody/btnR_step_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/R_clk_cnt_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.373ns  (logic 0.186ns (49.839%)  route 0.187ns (50.161%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.499ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.564     1.447    u_play_melody/CLK
+    SLICE_X51Y55         FDCE                                         r  u_play_melody/btnR_step_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y55         FDCE (Prop_fdce_C_Q)         0.141     1.588 r  u_play_melody/btnR_step_reg[1]/Q
+                         net (fo=59, routed)          0.187     1.775    u_play_melody/btnR_step_reg_n_0_[1]
+    SLICE_X52Y54         LUT6 (Prop_lut6_I1_O)        0.045     1.820 r  u_play_melody/R_clk_cnt[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.820    u_play_melody/R_clk_cnt[1]_i_1_n_0
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.834     1.962    u_play_melody/CLK
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[1]/C
+                         clock pessimism             -0.499     1.463    
+    SLICE_X52Y54         FDCE (Hold_fdce_C_D)         0.120     1.583    u_play_melody/R_clk_cnt_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.583    
+                         arrival time                           1.820    
+  -------------------------------------------------------------------
+                         slack                                  0.237    
+
+Slack (MET) :             0.240ns  (arrival time - required time)
+  Source:                 u_play_melody/btnR_step_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/R_clk_cnt_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.377ns  (logic 0.186ns (49.311%)  route 0.191ns (50.689%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.499ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.564     1.447    u_play_melody/CLK
+    SLICE_X51Y55         FDCE                                         r  u_play_melody/btnR_step_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y55         FDCE (Prop_fdce_C_Q)         0.141     1.588 r  u_play_melody/btnR_step_reg[1]/Q
+                         net (fo=59, routed)          0.191     1.779    u_play_melody/btnR_step_reg_n_0_[1]
+    SLICE_X52Y54         LUT6 (Prop_lut6_I1_O)        0.045     1.824 r  u_play_melody/R_clk_cnt[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.824    u_play_melody/R_clk_cnt[2]_i_1_n_0
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.834     1.962    u_play_melody/CLK
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[2]/C
+                         clock pessimism             -0.499     1.463    
+    SLICE_X52Y54         FDCE (Hold_fdce_C_D)         0.121     1.584    u_play_melody/R_clk_cnt_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.584    
+                         arrival time                           1.824    
+  -------------------------------------------------------------------
+                         slack                                  0.240    
+
+Slack (MET) :             0.258ns  (arrival time - required time)
+  Source:                 u_play_melody/btnMY_step_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.391ns  (logic 0.186ns (47.629%)  route 0.205ns (52.371%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.960ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.562     1.445    u_play_melody/CLK
+    SLICE_X53Y60         FDCE                                         r  u_play_melody/btnMY_step_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y60         FDCE (Prop_fdce_C_Q)         0.141     1.586 r  u_play_melody/btnMY_step_reg[1]/Q
+                         net (fo=55, routed)          0.205     1.791    u_play_melody/btnMY_step_reg_n_0_[1]
+    SLICE_X52Y60         LUT6 (Prop_lut6_I1_O)        0.045     1.836 r  u_play_melody/clk_cnt[5]_i_1/O
+                         net (fo=1, routed)           0.000     1.836    u_play_melody/clk_cnt[5]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.832     1.960    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[5]/C
+                         clock pessimism             -0.502     1.458    
+    SLICE_X52Y60         FDCE (Hold_fdce_C_D)         0.120     1.578    u_play_melody/clk_cnt_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.578    
+                         arrival time                           1.836    
+  -------------------------------------------------------------------
+                         slack                                  0.258    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 u_play_melody/btnMY_step_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.395ns  (logic 0.186ns (47.146%)  route 0.209ns (52.854%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.960ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.562     1.445    u_play_melody/CLK
+    SLICE_X53Y60         FDCE                                         r  u_play_melody/btnMY_step_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y60         FDCE (Prop_fdce_C_Q)         0.141     1.586 r  u_play_melody/btnMY_step_reg[1]/Q
+                         net (fo=55, routed)          0.209     1.795    u_play_melody/btnMY_step_reg_n_0_[1]
+    SLICE_X52Y60         LUT6 (Prop_lut6_I1_O)        0.045     1.840 r  u_play_melody/clk_cnt[6]_i_1/O
+                         net (fo=1, routed)           0.000     1.840    u_play_melody/clk_cnt[6]_i_1_n_0
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.832     1.960    u_play_melody/CLK
+    SLICE_X52Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[6]/C
+                         clock pessimism             -0.502     1.458    
+    SLICE_X52Y60         FDCE (Hold_fdce_C_D)         0.121     1.579    u_play_melody/clk_cnt_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.579    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+Slack (MET) :             0.263ns  (arrival time - required time)
+  Source:                 u_play_melody/MY_buzzer_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/MY_buzzer_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.209ns (54.569%)  route 0.174ns (45.431%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.563     1.446    u_play_melody/CLK
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/MY_buzzer_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y59         FDCE (Prop_fdce_C_Q)         0.164     1.610 r  u_play_melody/MY_buzzer_reg/Q
+                         net (fo=2, routed)           0.174     1.784    u_play_melody/MY_buzzer_reg_n_0
+    SLICE_X52Y59         LUT6 (Prop_lut6_I5_O)        0.045     1.829 r  u_play_melody/MY_buzzer_i_1/O
+                         net (fo=1, routed)           0.000     1.829    u_play_melody/MY_buzzer_i_1_n_0
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/MY_buzzer_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.833     1.961    u_play_melody/CLK
+    SLICE_X52Y59         FDCE                                         r  u_play_melody/MY_buzzer_reg/C
+                         clock pessimism             -0.515     1.446    
+    SLICE_X52Y59         FDCE (Hold_fdce_C_D)         0.120     1.566    u_play_melody/MY_buzzer_reg
+  -------------------------------------------------------------------
+                         required time                         -1.566    
+                         arrival time                           1.829    
+  -------------------------------------------------------------------
+                         slack                                  0.263    
+
+Slack (MET) :             0.275ns  (arrival time - required time)
+  Source:                 u_play_melody/btnR_step_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/R_clk_cnt_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.413ns  (logic 0.186ns (45.058%)  route 0.227ns (54.942%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.499ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.563     1.446    u_play_melody/CLK
+    SLICE_X51Y57         FDCE                                         r  u_play_melody/btnR_step_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y57         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  u_play_melody/btnR_step_reg[0]/Q
+                         net (fo=55, routed)          0.227     1.814    u_play_melody/btnR_step_reg_n_0_[0]
+    SLICE_X52Y54         LUT6 (Prop_lut6_I2_O)        0.045     1.859 r  u_play_melody/R_clk_cnt[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.859    u_play_melody/R_clk_cnt[4]_i_1_n_0
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.834     1.962    u_play_melody/CLK
+    SLICE_X52Y54         FDCE                                         r  u_play_melody/R_clk_cnt_reg[4]/C
+                         clock pessimism             -0.499     1.463    
+    SLICE_X52Y54         FDCE (Hold_fdce_C_D)         0.121     1.584    u_play_melody/R_clk_cnt_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.584    
+                         arrival time                           1.859    
+  -------------------------------------------------------------------
+                         slack                                  0.275    
+
+Slack (MET) :             0.275ns  (arrival time - required time)
+  Source:                 u_play_melody/clk_cnt_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_play_melody/clk_cnt_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.366ns  (logic 0.186ns (50.759%)  route 0.180ns (49.241%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.959ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.562     1.445    u_play_melody/CLK
+    SLICE_X49Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y60         FDCE (Prop_fdce_C_Q)         0.141     1.586 f  u_play_melody/clk_cnt_reg[0]/Q
+                         net (fo=4, routed)           0.180     1.767    u_play_melody/clk_cnt[0]
+    SLICE_X49Y60         LUT6 (Prop_lut6_I0_O)        0.045     1.812 r  u_play_melody/clk_cnt[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.812    u_play_melody/clk_cnt[0]_i_1_n_0
+    SLICE_X49Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=140, routed)         0.831     1.959    u_play_melody/CLK
+    SLICE_X49Y60         FDCE                                         r  u_play_melody/clk_cnt_reg[0]/C
+                         clock pessimism             -0.514     1.445    
+    SLICE_X49Y60         FDCE (Hold_fdce_C_D)         0.091     1.536    u_play_melody/clk_cnt_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.536    
+                         arrival time                           1.812    
+  -------------------------------------------------------------------
+                         slack                                  0.275    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X59Y58   u_btnMY_debouncer/btn_state_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y55   u_btnMY_debouncer/count_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y58   u_btnMY_debouncer/count_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y57   u_btnMY_debouncer/count_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y57   u_btnMY_debouncer/count_reg[12]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y58   u_btnMY_debouncer/count_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y59   u_btnMY_debouncer/count_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y58   u_btnMY_debouncer/count_reg[15]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X58Y58   u_btnMY_debouncer/count_reg[16]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X59Y58   u_btnMY_debouncer/btn_state_reg/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X59Y58   u_btnMY_debouncer/btn_state_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y55   u_btnMY_debouncer/count_reg[0]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y55   u_btnMY_debouncer/count_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y58   u_btnMY_debouncer/count_reg[10]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y58   u_btnMY_debouncer/count_reg[10]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[11]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[11]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[12]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[12]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X59Y58   u_btnMY_debouncer/btn_state_reg/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X59Y58   u_btnMY_debouncer/btn_state_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y55   u_btnMY_debouncer/count_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y55   u_btnMY_debouncer/count_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y58   u_btnMY_debouncer/count_reg[10]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y58   u_btnMY_debouncer/count_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[11]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[12]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X58Y57   u_btnMY_debouncer/count_reg[12]/C
+
+
+
